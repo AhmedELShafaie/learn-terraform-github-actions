@@ -84,9 +84,12 @@ jobs:
 
 
       - name: Get Terraform Outputs
+        id: terraform_variable 
         run: |
           Output=$(terraform output web-address)
-          echo $Output
+          echo "$Output" >> $GITHUB_ENV 
 
       - name: Echo Output
-        run: echo $Output
+        run: echo "${{ env.Output }}"
+
+
