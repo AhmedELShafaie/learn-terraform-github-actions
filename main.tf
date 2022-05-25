@@ -11,16 +11,18 @@ terraform {
       source  = "hashicorp/random"
       version = "3.0.1"
     }
-   }
-  required_version = ">= 1.1.0"
-  backend "remote" {
-      hostname     = "app.terraform.io"
-      organization = "samir-toptal"
 
-      workspaces {
-        name = "samir-toptal-workspace"
-      }
- }
+    required_version = ">= 1.1.0"
+  }
+  
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "samir-toptal"
+
+    workspaces {
+      name = "samir-toptal-workspace"
+    }
+  }
   #  cloud {
   #   organization = "my-learn-terraform-aws"
 
