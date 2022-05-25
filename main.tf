@@ -12,17 +12,25 @@ terraform {
       version = "3.0.1"
     }
     backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "samir-toptal"
+      hostname     = "app.terraform.io"
+      organization = "samir-toptal"
 
-    workspaces {
-      name = "samir-toptal-workspace"
+      workspaces {
+        name = "samir-toptal-workspace"
+      }
     }
-  }
+    cloud {
+      organization = "samir-toptal"
+
+      workspaces {
+        name = "samir-toptal-workspace"
+      }
+    }
+
   }
   required_version = ">= 1.1.0"
 
-  
+
 }
 
 provider "aws" {
