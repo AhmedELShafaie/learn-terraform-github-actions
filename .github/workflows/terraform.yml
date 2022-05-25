@@ -85,4 +85,6 @@ jobs:
 
       - name: Get Terraform Outputs
         run: Output=$(terraform output web-address)
-        
+
+      - name: Echo Output
+        run: echo $Output
