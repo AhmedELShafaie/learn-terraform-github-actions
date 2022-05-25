@@ -20,14 +20,14 @@ terraform {
       workspaces {
         name = "samir-toptal-workspace"
       }
-   cloud {
-    organization = "my-learn-terraform-aws"
+ }
+  #  cloud {
+  #   organization = "my-learn-terraform-aws"
 
-    workspaces {
-      name = "gh-actions-demo"
-    }
-   }
-}
+  #   workspaces {
+  #     name = "gh-actions-demo"
+  #   }
+  #  }
 }
 provider "aws" {
   region = "us-west-2"
