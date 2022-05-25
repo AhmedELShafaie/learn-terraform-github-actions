@@ -14,13 +14,25 @@ terraform {
   }
   required_version = ">= 1.1.0"
 
-  cloud {
-    organization = "my-learn-terraform-aws"
+  # cloud {
+  #   organization = "my-learn-terraform-aws"
 
+  #   workspaces {
+  #     name = "gh-actions-demo"
+  #   }
+  # }
+
+  #Add Backend
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "samir-toptal"
     workspaces {
-      name = "gh-actions-demo"
+      name = "samir-toptal-workspace"
+      
     }
   }
+
+  
 }
 
 provider "aws" {
