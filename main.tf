@@ -24,15 +24,15 @@ terraform {
 
   #Add Backend
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "samir-toptal"
     workspaces {
       name = "samir-toptal-workspace"
-      
+
     }
   }
 
-  
+
 }
 
 provider "aws" {
